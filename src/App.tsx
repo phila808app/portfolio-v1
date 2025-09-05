@@ -1,25 +1,27 @@
 import './App.css'
 import Navbar from './components/Navbar';
+import Midde from './components/Midde';
+import onepiece from './assets/onepiece2.jpg';
+import Contact from './components/Contact';
 
 function App() {
-  const items = ['Prime Circle', 'Arno Carstons', 'The Parlotones'];
 
 
   return (
     <>
-      <div>
+ 
+      <div className="w-screen h-screen bg-center bg-cover"
+  style={{ backgroundImage: `url(${onepiece})` }}>
         <Navbar/>
-  
+    
+        <Midde/>
+
+
+        <div className='absolute bottom-0 left-0 right-0'>
+          <Contact/>
+
+        </div>
       
-        <h1>Simple List with Vite and React</h1>
-      <ol>
-        {
-          items.map((item,index)=>(
-            <li key={index}>{item}</li>
-          ))
-        }
-      
-      </ol>
     
        
       </div>
